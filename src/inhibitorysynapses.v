@@ -8,14 +8,14 @@ module inhibatorysynapses(
     input [0:0] edgedetectoroutput,
     
     //output will return a inhibitory signal that we will use in the downstream circuitry
-    output [0:0] inhibitorysignal;
+    output [0:0] inhibitorysignal
     
 );
 
 reg [0:0] inhibitorysignal_r;
 
 // only shows inhibitory signals if the 
-always(@posedge clk)
+always @(posedge clk)
     if(reset_i) begin
         inhibitorysignal_r <= 1'b0;
     end else if (edgedetectoroutput) begin

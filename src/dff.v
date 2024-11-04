@@ -13,13 +13,13 @@ reg [0:0] q_r;
 
 
 
-always @(posedge clk)(
+always @(posedge clk) begin
     if (reset_i) begin
         q_r <= reset_val_p; 
     end else if (en_i) begin // can also just switch it to a basic else instead of en_i 
         q_r <= d_in;
     end
-);
+end
 
 
 

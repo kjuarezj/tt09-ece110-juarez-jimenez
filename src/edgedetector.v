@@ -17,7 +17,7 @@ reg[0:0] risingedge_r;
 reg[0:0] fallingedge_r; 
 
 // edge detector from 125 , instead of buttons, its the edges 
-always(@posedge clk)begin
+always @(posedge clk) begin
     if (reset_i) begin
         // resetting all reg
         prevedge <= 1'b0;

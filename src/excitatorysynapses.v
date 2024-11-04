@@ -8,7 +8,7 @@ module exictatorysynapses(
     input [0:0] edgedetectoroutput,
     
     //output will return a excited pulse that we will use in the downstream circuitry
-    output [0:0] excitedpulse,
+    output [0:0] excitedpulse
 
 );
 
@@ -16,7 +16,7 @@ module exictatorysynapses(
 reg [0:0] excitedpulse_r; 
 
 // only shows excited pulses if the edge detector output was high 
-always(@posedge clk)
+always @(posedge clk)
     if(reset_i) begin
         excitedpulse_r <= 1'b0;
     end else if (edgedetectoroutput) begin

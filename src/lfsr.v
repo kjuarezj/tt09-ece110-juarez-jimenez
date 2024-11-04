@@ -13,7 +13,7 @@ module lfsr(
 
 wire[7:0] d_i ; 
 assign d_i[0] = feedback;
-assign d_i[7:1] = q_r[6:0]
+assign d_i[7:1] = q_r[6:0];
 
 reg [7:0] q_r;
 
