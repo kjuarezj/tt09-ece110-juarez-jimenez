@@ -21,7 +21,7 @@ always @(posedge clk)
         excitedpulse_r <= 1'b0;
     end else if (edgedetectoroutput) begin
         excitedpulse_r <= 1'b1;
-    end else if begin
+    end else begin
         excitedpulse_r <= 1'b0;
     end
 

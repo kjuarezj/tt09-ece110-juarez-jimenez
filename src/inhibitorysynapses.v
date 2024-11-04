@@ -20,7 +20,7 @@ always @(posedge clk)
         inhibitorysignal_r <= 1'b0;
     end else if (edgedetectoroutput) begin
         inhibitorysignal_r <= 1'b1;
-    end else if begin
+    end else begin
         inhibitorysignal_r <= 1'b0;
     end
 
