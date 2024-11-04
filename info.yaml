@@ -40,24 +40,24 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]:  "LFSR Output Bit 0"
+  uo[1]: "LFSR Output Bit 1"
+  uo[2]: "LFSR Output Bit 2"
+  uo[3]:  "LFSR Output Bit 3"
+  uo[4]:  "LFSR Output Bit 4"
+  uo[5]:  "LFSR Output Bit 5"
+  uo[6]:  "LFSR Output Bit 6"
+  uo[7]:  "LFSR Output Bit 7"
 
   # Bidirectional pins
-  uio[0]: "LFSR Output Bit 0"
-  uio[1]: "LFSR Output Bit 1"
-  uio[2]: "LFSR Output Bit 2"
-  uio[3]: "LFSR Output Bit 3"
-  uio[4]: "LFSR Output Bit 4"
-  uio[5]: "LFSR Output Bit 5"
-  uio[6]: "LFSR Output Bit 6"
-  uio[7]: "LFSR Output Bit 7"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6
