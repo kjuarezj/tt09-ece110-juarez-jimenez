@@ -28,7 +28,7 @@ module tt_um_juarez_jimenez(
 
 //lfsrout, ris, fall, pulse, signal, ogfeedback, selected feedback reset 
 wire [7:0] lfsroutput;
-wire risingedge, fallingedge, signal, pulse, ogfeedback, feedbackselected, reset;
+wire risingedge, fallingedge, signal, pulse, ogfeedback, feedbackselected;
 wire reset = ~rst_n; 
 
 assign uo_out = lfsroutput;

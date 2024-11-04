@@ -19,14 +19,14 @@ reg [7:0] q_r;
 
 
 
-dff dff0( .clk(clk) , .d_i(d_i[0]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[0]));
-dff dff1( .clk(clk) , .d_i(d_i[1]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[1]));
-dff dff2( .clk(clk) , .d_i(d_i[2]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[2]));
-dff dff3( .clk(clk) , .d_i(d_i[3]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[3]));
-dff dff4( .clk(clk) , .d_i(d_i[4]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[4]));
-dff dff5( .clk(clk) , .d_i(d_i[5]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[5]));
-dff dff6( .clk(clk) , .d_i(d_i[6]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[6]));
-dff dff7( .clk(clk) , .d_i(d_i[7]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[7]));
+dff dff0( .clk(clk) , .d_in(d_i[0]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[0]));
+dff dff1( .clk(clk) , .d_in(d_i[1]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[1]));
+dff dff2( .clk(clk) , .d_in(d_i[2]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[2]));
+dff dff3( .clk(clk) , .d_in(d_i[3]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[3]));
+dff dff4( .clk(clk) , .d_in(d_i[4]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[4]));
+dff dff5( .clk(clk) , .d_in(d_i[5]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[5]));
+dff dff6( .clk(clk) , .d_in(d_i[6]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[6]));
+dff dff7( .clk(clk) , .d_in(d_i[7]) , .en_i(en_i) , .reset_i(reset_i), .q_o(q_r[7]));
 
 
 assign q_o = q_r; 
