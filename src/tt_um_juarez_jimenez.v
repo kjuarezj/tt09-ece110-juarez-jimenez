@@ -32,17 +32,19 @@ wire risingedge, fallingedge, signal, pulse, ogfeedback, feedbackselected;
 wire reset = ~rst_n; 
 
 assign uo_out = lfsroutput;
+
 assign ogfeedback = lfsroutput[7] ^ lfsroutput[5] ^ lfsroutput[4] ^ lfsroutput[3]; // calculaiting feedback
 
 
 
-lfsr lfsr_func(.clk(clk), .reset_i(reset), .en_i(1'b1), .feedback(feedbackselected), .q_o(lfsroutput)); //feedback from feedback selector
+lfsr lfsr_func(.clk(clk), .reset_i(reset), .en_i(1'b1),  .seed(ui_in), .feedback(feedbackselected), .q_o(lfsroutput)); //feedback from feedback selector
 
 //edge detection on lfsr output bit 0 
 edgedetector edge_func(.clk(clk), .reset_i(reset), .lfsroutput(lfsroutput[0]), .risingedge(risingedge), .fallingedge(fallingedge));
 
 //EXCITED SYNAPSES YAYAYAYYAYA
 exictatorysynapses ec_fun(.clk(clk), .reset_i(reset), .edgedetectoroutput(risingedge), .excitedpulse(pulse));
+
 
 //chill synapses #boring
 inhibatorysynapses ih_func(.clk(clk), .reset_i(reset), .edgedetectoroutput(fallingedge), .inhibitorysignal(signal));
